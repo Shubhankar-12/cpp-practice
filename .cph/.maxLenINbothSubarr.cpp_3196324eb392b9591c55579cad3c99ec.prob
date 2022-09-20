@@ -1,0 +1,1 @@
+{"name":"Local: maxLenINbothSubarr","url":"d:\\LeetCode\\maxLenINbothSubarr.cpp","tests":[{"id":1663665542038,"input":"5 5\n3 2 1 7 9\n4 7 3 2 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\LeetCode\\maxLenINbothSubarr.cpp","group":"local","local":true}

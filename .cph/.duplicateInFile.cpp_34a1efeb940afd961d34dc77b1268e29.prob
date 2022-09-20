@@ -1,0 +1,1 @@
+{"name":"Local: duplicateInFile","url":"d:\\LeetCode\\duplicateInFile.cpp","tests":[{"id":1663601618020,"input":"root/a 1.txt(abcd) 2.txt(efgh),root/c 3.txt(abcd),root/c/d 4.txt(efgh),root 4.txt(efgh)","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\LeetCode\\duplicateInFile.cpp","group":"local","local":true}
