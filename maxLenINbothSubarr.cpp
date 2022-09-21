@@ -7,15 +7,15 @@ int findLength(vector<int> &v1, vector<int> &v2)
     if (!s1 || !s2)
         return 0;
     vector<int> dp(s2 + 1);
-    int res = 0;
+    int ans = 0;
     for (int i = s1 - 1; i >= 0; i--)
     {
         for (int j = 0; j < s2; j++)
         {
-            res = max(res, dp[j] = v1[i] == v2[j] ? 1 + dp[j + 1] : 0);
+            ans = max(ans, dp[j] = v1[i] == v2[j] ? 1 + dp[j + 1] : 0);
         }
     }
-    return res;
+    return ans;
 }
 
 int main()
