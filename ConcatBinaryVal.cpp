@@ -2,21 +2,21 @@
 using namespace std;
 #define ll long long
 
-int numberOfBits(int n)
+int decToBin(int n)
 {
     return log2(n) + 1;
 }
 
 int concatenatedBinary(int n)
 {
-    long ans = 0, MOD = 1e9 + 7;
+    long res = 0, md = 1e9 + 7;
 
     for (int i = 1; i <= n; ++i)
     {
-        int len = numberOfBits(i);
-        ans = ((ans << len) % MOD + i) % MOD;
+        int len = decToBin(i);
+        res = ((res << len) % md + i) % md;
     }
-    return ans;
+    return res;
 }
 
 int main()
