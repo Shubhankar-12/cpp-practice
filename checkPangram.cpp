@@ -3,18 +3,10 @@ using namespace std;
 
 bool checkIfPangram(string str)
 {
-    if (str.size() < 26)
-        return false;
-    unordered_map<char, bool> mp;
-    for (auto i : str)
-        mp[i] = true;
-    for (int i = 97; i < (97 + 26); i++)
-    {
-        char ch = char(i);
-        if (!mp[ch])
-            return false;
-    }
-    return true;
+    unordered_set<char> st;
+    for (auto ch : str)
+        st.insert(ch);
+    return st.size() == 26;
 }
 
 int main()
