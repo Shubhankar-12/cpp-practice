@@ -4,8 +4,8 @@ using namespace std;
 int help(vector<vector<int>> &arr, int r, int c)
 {
     int n = arr.size();
-    if (c == n - 1)
-        return res;
+    if (r == n - 1)
+        return arr[r][c];
 }
 
 int minFallingPathSum(vector<vector<int>> &arr)
