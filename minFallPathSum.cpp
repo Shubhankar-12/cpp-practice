@@ -28,6 +28,34 @@ int minFallingPathSum(vector<vector<int>> &arr)
     }
     return ans;
 }
+
+int minFallingPathSumDp(vector<vector<int>> &arr)
+{
+    int n = arr.size();
+    if (n == 0)
+        return 0;
+    vector<vector<int>> dp(n, vector<int>(n));
+    dp[0] = arr[0];
+    for (int i = 1; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            dp[i][j] += arr[i - 1][j];
+            if (j > 0)
+                dp[i][j] += min(dp[i][j], arr[i - 1][j - 1]);
+            if (j < n - 1)
+                dp[i][j] += min(dp[i][j], arr[i - 1][j + 1]);
+        }
+    }
+    int ans = INT_MAX;
+    for (int i = 0; i < n; i++)
+    {
+        ans = min(ans, dp[0][i]);
+    }
+
+    return ans;
+}
+
 int main()
 {
     int n;
@@ -40,6 +68,6 @@ int main()
             cin >> arr[i][j];
         }
     }
-    cout << minFallingPathSum(arr);
+    cout << minFallingPathSumDp(arr);
     return 0;
 }
