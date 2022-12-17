@@ -9,7 +9,7 @@ bool isOperator(string s)
     return false;
 }
 
-ll calulate(int s1, int s2, string op)
+ll calulate(ll s1, ll s2, string op)
 {
     ll ans;
     if (op == "+")
