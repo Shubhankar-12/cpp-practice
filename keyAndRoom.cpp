@@ -9,19 +9,16 @@ bool canVisitAllRooms(vector<vector<int>> &rooms)
     {
         mp[i] = rooms[i];
     }
-    )
-        mp[i]
     for (int i = 1; i < n; i++)
     {
-        if (st.find(i) == st.end())
-            return false;
-        else
+        bool dekh = 0;
+        for (int j = 0; j < n; j++)
         {
-            for (auto j : rooms[i])
-                st.insert(j);
+            if (j != i)
+            {
+            }
         }
     }
-    return true;
 }
 
 int main()
