@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool canJump(vector<int> &arr)
+bool canJumpDp(vector<int> &arr)
 {
     int n = arr.size();
     if (n == 0)
@@ -32,5 +32,6 @@ bool canJump(vector<int> &nums)
 int main()
 {
     vector<int> arr = {2, 3, 1, 0, 2};
+    cout << canJump(arr);
     return 0;
 }
