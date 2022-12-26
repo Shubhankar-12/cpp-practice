@@ -31,6 +31,6 @@ bool canJump(vector<int> &nums)
 
 int main()
 {
-
+    vector<int> arr = {2, 3, 1, 0, 2};
     return 0;
 }
