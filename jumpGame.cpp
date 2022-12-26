@@ -12,7 +12,7 @@ bool canJump(vector<int> &arr)
     {
         for (int i = 1; i <= arr[0]; i++)
         {
-            return canJump(arr.resize(, n - 1));
+            // resize array
         }
     }
 }
