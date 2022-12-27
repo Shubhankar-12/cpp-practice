@@ -1,21 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool canJumpDp(vector<int> &arr)
-{
-    int n = arr.size();
-    if (n == 0)
-        return true;
-    if (arr[0] == 0)
-        return false;
-    else
-    {
-        for (int i = 1; i <= arr[0]; i++)
-        {
-            // resize array
-        }
-    }
-}
 // Greedy Solution
 bool canJump(vector<int> &nums)
 {
