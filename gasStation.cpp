@@ -22,6 +22,5 @@ int canCompleteCircuit(vector<int> &gas, vector<int> &cost)
 }
 int main()
 {
-
     return 0;
 }
