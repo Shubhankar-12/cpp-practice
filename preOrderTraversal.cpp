@@ -11,20 +11,37 @@ struct TreeNode
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-void preOrder(TreeNode *root, vector<int> &arr)
-{
-    if (!root)
-        return;
-    arr.push_back(root->val);
-    preOrder(root->left, arr);
-    preOrder(root->right, arr);
-}
-
 vector<int> preorderTraversal(TreeNode *root)
 {
-    vector<int> arr;
-    preOrder(root, arr);
-    return arr;
+    vector<int> nodes;
+    while (root)
+    {
+        if (root->left)
+        {
+            TreeNode *pre = root->left;
+            while (pre->right && pre->right != root)
+            {
+                pre = pre->right;
+            }
+            if (!pre->right)
+            {
+                pre->right = root;
+                nodes.push_back(root->val);
+                root = root->left;
+            }
+            else
+            {
+                pre->right = NULL;
+                root = root->right;
+            }
+        }
+        else
+        {
+            nodes.push_back(root->val);
+            root = root->right;
+        }
+    }
+    return nodes;
 }
 
 int main()
