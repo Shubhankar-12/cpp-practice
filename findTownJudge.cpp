@@ -16,6 +16,6 @@ int findJudge(int n, vector<vector<int>> &arr)
 
 int main()
 {
-    // code
+    // codes
     return 0;
 }
